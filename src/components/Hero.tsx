@@ -51,7 +51,12 @@ export default function Hero() {
     )
 }
 
-function Form({ isFormOpen, setIsFormOpen }: any) {
+type FormProps = {
+    isFormOpen: boolean;
+    setIsFormOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function Form({ isFormOpen, setIsFormOpen }: FormProps) {
 
     const [shouldRender, setShouldRender] = useState(false)
 
